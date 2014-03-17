@@ -1,0 +1,79 @@
+[
+    {
+        "model": "main.Migrante", 
+        "pk" : 1,
+        "fields": {
+            "pseudo" : "Zaratrustra",
+            "de_pais" : "mexico",
+            "edad" : 23,
+            "genero" : "Masculino",
+            "a_pais" : "Estados Unidos"
+        }
+    }, 
+    {
+        "model": "main.Migrante", 
+        "pk" : 2,
+        "fields": {
+            "pseudo" : "Julieta",
+            "de_pais" : "Honduras",
+            "edad" : 23,
+            "genero" : "Femenino",
+            "a_pais" : "Estados Unidos"
+        }
+    },
+    {
+        "model": "main.Migrante", 
+        "pk" : 3,
+        "fields": {
+            "pseudo" : "kiot",
+            "de_pais" : "mexico",
+            "edad" : 14,
+            "genero" : "Masculino",
+            "a_pais" : "Estados Unidos"
+        }
+    }, 
+    {
+        "model": "main.Migrante", 
+        "pk" : 4,
+        "fields": {
+            "pseudo" : "Linett",
+            "de_pais" : "mexico",
+            "edad" : 24,
+            "genero" : "Femenino",
+            "a_pais" : "jamaica"
+        }
+    },
+    {
+        "model": "main.Migrante", 
+        "pk" : 5,
+        "fields": {
+            "pseudo" : "Lamba",
+            "de_pais" : "mexico",
+            "edad" : 42,
+            "genero" : "Masculino",
+            "a_pais" : "Kyubit"
+        }
+    }, 
+    {
+        "model": "main.Migrante", 
+        "pk" : 6,
+        "fields": {
+            "pseudo" : "yolo",
+            "de_pais" : "argentina",
+            "edad" : 64,
+            "genero" : "Masculino",
+            "a_pais" : "Estados Unidos"
+        }
+    }, 
+    {
+        "model": "main.Migrante", 
+        "pk" : 7,
+        "fields": {
+            "pseudo" : "Zaratrustra",
+            "de_pais" : "mexico",
+            "edad" : 23,
+            "genero" : "Masculino",
+            "a_pais" : "Perú"
+        }
+    }
+]
