@@ -8,7 +8,7 @@ from django.forms import ModelForm
 # Create your models here.
 class Migrante(models.Model):
 	migrante_id = models.AutoField(primary_key=True)
-	pseudo = models.CharField(max_length=50)
+	pseudo = models.CharField(max_length=50, primary_key=True)
 	de_pais = models.CharField(max_length=50)
 	edad = models.IntegerField(default=0)
 	genero = models.CharField(max_length=10)
@@ -37,7 +37,7 @@ class Abuso(models.Model):
 
 class CheckPoint(models.Model):
 	checkpoint_id = models.AutoField(primary_key=True)
-	migrante = models.ForeignKey(Migrante)
+	pseudo = models.CharField(max_length=50)
 	longitud = models.IntegerField(default=0)
 	latitud = models.IntegerField(default=0)
 	ciudad = models.CharField(max_length=100)

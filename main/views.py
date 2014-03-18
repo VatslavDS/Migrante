@@ -10,12 +10,13 @@ from django.core.mail import EmailMessage
 def buscarUsuario(request):
 	if request.method == 'POST':
 		formulario_migrante = MigranteSearch(request.POST)
+		print request.POST
 		if formulario_migrante.is_valid():
-			print request.POST
+			pseudo = formulario_migrante.cleaned_data['pseudo']
 			try:
-				datos_migrante = Migrante.objects.get(pseudo=request.POST.get('pseudo'))
+				datos_migrante = Migrante.objects.get(pseudo=pseudo)
 			except:
-				datos_migrante = None
+			    datos_migrante = None
 			return render_to_response('main.html', {'migrante' : datos_migrante})
 	else:
 		formulario_migrante = MigranteSearch()
@@ -27,7 +28,8 @@ def registroMigrante(request):
 		formulario_registro = MigranteForm(request.POST)
 		if formulario_registro.is_valid():
 			formulario_registro.save()
-			datos_migrante = Migrante.objects.get(pseudo=formulario_registro.pseudo)
+			pseudo = formulario_registro.cleaned_data['pseudo']
+			datos_migrante = Migrante.objects.get(pseudo=pseudo)
 			return render_to_response('main.html', {'migrante' : datos_migrante})
 	else:
 		formulario_registro = MigranteForm()
@@ -43,8 +45,7 @@ def checkPoint(request):
 			return render_to_response('main.html')				
 	else:
 		formulario_checkpoint = CheckPointForm()
-	return render_to_response('checkpoint.html', {'formulario' : formulario_checkpoint})
-
+	return render_to_response('checkpoint.html', {'formulario' : formulario_checkpoint}, context_instance=RequestContext(request))
 
 def main(request):
-	return render_to_response('index.html')
+	return render_to_response('main.html')

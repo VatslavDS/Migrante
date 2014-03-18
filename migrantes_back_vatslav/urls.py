@@ -12,5 +12,6 @@ urlpatterns = patterns('',
     #Todavia no implemento main
     url(r'^main/', main),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', buscarUsuario),
     
 )

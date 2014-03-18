@@ -1,8 +1,5 @@
 {%  extends 'base.html' %}
 {%  block contenido %}
-	{%  for i in migrante %}
-	<tr>
-		<td>{{ i }}</td>
-	</tr>
-	{% endfor %}
+	<p>{{migrante.pseudo}}</p>
 {%  endblock %}
+

@@ -4,7 +4,7 @@ from django import forms
 from models import Migrante, PreguntasDelDia, RespuestasDelDia, Abuso, CheckPoint
 
 class MigranteSearch(forms.Form):
-	buscarMigrante = forms.CharField(max_length=50)
+	pseudo = forms.CharField(max_length=50)
 
 
 class MigranteForm(ModelForm):
@@ -30,4 +30,4 @@ class AbusoForm(ModelForm):
 class CheckPointForm(ModelForm):
 	class Meta:
 		model = CheckPoint
-		fields = ['migrante', 'longitud', 'latitud', 'ciudad', 'estado', 'pais']	
+		fields = ['pseudo', 'longitud', 'latitud', 'ciudad', 'estado', 'pais']	
